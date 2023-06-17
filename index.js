@@ -1,5 +1,5 @@
-'use strict';
-async function cleanText() {
+
+ function  cleanText() {
     var inputText = document.getElementById('input-text').value;
     var cleanedText = inputText
         .toLowerCase()
@@ -7,19 +7,42 @@ async function cleanText() {
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z ]/g, '')
         .replace(/\s+/g, ' ');
-    /* const response = await axios.post('https://paraphrase-genius.p.rapidapi.com/dev/paraphrase/', { 'text': cleanedText},
-        {
-            headers: {
-                'content-type': 'application/json',
-                'X-RapidAPI-Key': '3610573747msh014e8f123f802f1p149effjsnc811a920eea7',
-                'X-RapidAPI-Host': 'paraphrase-genius.p.rapidapi.com'
-              },
+        
+        findApi(cleanedText).then((response)=>{
+            document.getElementById('output-text').innerText = response;
         })
 
-    console.log(...response.data[0]); */
 
-    document.getElementById('output-text').innerText = cleanedText;
+  
+
 }
+
+async function findApi(params) {
+    const url = 'https://paraphraser1.p.rapidapi.com/';
+    const headers = {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': '3610573747msh014e8f123f802f1p149effjsnc811a920eea7',
+      'X-RapidAPI-Host': 'paraphraser1.p.rapidapi.com'
+    };
+  
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ input: params })
+    });
+  
+    if (response.ok) {
+      const data = await response.json();
+      if (data.output) {
+        return data.output;
+      } else {
+        alert('No se pudo encontrar una frase similar');
+      }
+    } else {
+      alert('Error en la solicitud de API');
+    }
+  }
+  
 
 //fucion copiar en portapapeles
 function copyToClipboard() {

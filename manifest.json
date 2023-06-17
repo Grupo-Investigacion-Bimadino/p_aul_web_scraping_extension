@@ -1,4 +1,4 @@
- {
+{
   "manifest_version": 3,
   "name": "Text Extension",
   "description": "Copy and Clean Text Extension",
@@ -9,7 +9,6 @@
   ],
   "action": {
     "default_popup": "index.html",
-
     "default_icon": {
       "16": "./assets/icon.png",
       "48": "./assets/icon.png",
@@ -21,6 +20,4 @@
     "48": "./assets/icon.png",
     "128": "./assets/icon.png"
   }
-} 
-
-  
+}

@@ -7,3 +7,7 @@
 <li>Carlos Julián Ramos Gonzáles</li>
 <li></li>
 <li></li>
+
+<h2>Comand dev:</h2>
+<li>npm install</li>
+<li>npx tailwindcss -i ./dist/input.css -o ./dist/output.css --watch </li>
