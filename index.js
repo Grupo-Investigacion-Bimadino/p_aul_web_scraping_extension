@@ -1,5 +1,5 @@
 'use strict';
-function cleanText() {
+async function cleanText() {
     var inputText = document.getElementById('input-text').value;
     var cleanedText = inputText
         .toLowerCase()
@@ -7,7 +7,17 @@ function cleanText() {
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z ]/g, '')
         .replace(/\s+/g, ' ');
-  
+    /* const response = await axios.post('https://paraphrase-genius.p.rapidapi.com/dev/paraphrase/', { 'text': cleanedText},
+        {
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Key': '3610573747msh014e8f123f802f1p149effjsnc811a920eea7',
+                'X-RapidAPI-Host': 'paraphrase-genius.p.rapidapi.com'
+              },
+        })
+
+    console.log(...response.data[0]); */
+
     document.getElementById('output-text').innerText = cleanedText;
 }
 
@@ -38,7 +48,7 @@ function copyToClipboard() {
 
 var botoninicial = document.getElementById('clean-button')
 botoninicial?.addEventListener('click', cleanText);
-var botoncopy= document.getElementById('Copy-button')
+var botoncopy = document.getElementById('Copy-button')
 botoncopy?.addEventListener('click', copyToClipboard);
 
 
