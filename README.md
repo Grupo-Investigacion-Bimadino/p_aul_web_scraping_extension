@@ -3,10 +3,11 @@
 </h3>
 
 <h2>Equipo:</h2>
-<li></li>
+<li>Jorge López Acosta</li>
 <li>Carlos Julián Ramos Gonzáles</li>
-<li></li>
-<li></li>
+<li>Alfredo Smith Martínez Hernandez</li>
+<li>Jesús Alberto Vargas Soto</li>
+<li>Jhoan Sebastian Fernando Julio</li>
 
 <h2>Comand dev:</h2>
 <li>npm install</li>
