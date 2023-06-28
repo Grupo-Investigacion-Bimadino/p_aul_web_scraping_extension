@@ -3,7 +3,7 @@
 </h3>
 
 <h2>Equipo:</h2>
-<li>Jorge López Acosta</li>
+<li>Jorge Lopez Acosta</li>
 <li>Carlos Julián Ramos Gonzáles</li>
 <li>Alfredo Smith Martínez Hernandez</li>
 <li>Jesús Alberto Vargas Soto</li>
